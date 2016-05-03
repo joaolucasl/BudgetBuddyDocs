@@ -1,23 +1,24 @@
 \documentclass[
-	% -- op��es da classe memoir --
+	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
-	openright,			% cap�tulos come�am em p�g �mpar (insere p�gina vazia caso preciso)
-	twoside,			% para impress�o em recto e verso. Oposto a oneside
+	oneside,			% para impressão em recto e verso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
-	% -- op��es da classe abntex2 --
-	%chapter=TITLE,		% t�tulos de cap�tulos convertidos em letras mai�sculas
-	%section=TITLE,		% t�tulos de se��es convertidos em letras mai�sculas
-	%subsection=TITLE,	% t�tulos de subse��es convertidos em letras mai�sculas
-	%subsubsection=TITLE,% t�tulos de subsubse��es convertidos em letras mai�sculas
-	% -- op��es do pacote babel --
-	english,			% idioma adicional para hifeniza��o
-	brazil,				% o �ltimo idioma � o principal do documento
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
 	]{abntex2}
 \usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{booktabs}
 
 % Title Page
-\title{BudgetBuddy - Organizador de Or�amento Pessoal}
-\author{Jo�o Lucas Lucchetta}
+\title{BudgetBuddy - Organizador de Orçamento Pessoal}
+\author{João Lucas Lucchetta}
 
 
 \begin{document}
@@ -26,17 +27,45 @@
 \begin{abstract}
 \end{abstract}
 
-\section*{Introdu��o}
-A gerencia de gastos � um quesito importante da moderna. Servi�os e bens diversos podem ser adquiridos com poucos toques numa tela,
-e essa facilidade pode amea�ar o planejamento financeiro de muitos. Estudantes do ensino superior, geralmente, levam uma vida agitada
-e n�o raramente negligenciam certos aspectos da vida adulta, como por exemplo seus or�amentos pessoais. 
+\chapter*{Introdução}
+A gerencia de gastos é um quesito importante da moderna. Serviços e bens diversos podem ser adquiridos com poucos toques numa tela,
+e essa facilidade pode ameaçar o planejamento financeiro de muitos. Estudantes do ensino superior, geralmente, levam uma vida agitada
+e não raramente negligenciam certos aspectos da vida adulta, como por exemplo seus orçamentos pessoais. \\ 
+Este relatório detalha o funcionamento e especificações do \textit{BudgetBuddy}, um software de assistência a organização de orçamentos 
+pessoais, desenvolvido baseando-se nas necessidades gerais da população estudantil do Ensino Superior Brasileiro.
 
-\\ Este relat�rio detalha o funcionamento e especifica��es do \textit{BudgetBuddy}, um software de assist�ncia a organiza��o de or�amentos 
-pessoais, desenvolvido baseando-se nas necessidades gerais da popula��o estudantil do Ensino Superior Brasileiro.
 
-\section{Funcionalidades}
+\chapter{Problema}
+[A SER ADICIONADO]
+\chapter{Requisitos}
+De modo a solucionar os problemas mencionados, a versão inicial do software necessita endereçar alguns requerimentos, chamados de Requisitos Funcionais e Não-Funcionais. Estes delimitam funções que a aplicação deve oferecer ou requisitos operacionais da aplicação.
+\section{Requsitos Funcionais}
+Esses são as funções consideradas essenciais ao software e que serão implementadas de acordo com seu nível de prioridades, tendo
+primazia no período de desenvolvimento as funções com prioridade alta. Os requisitos não funcionais para essa aplicação, segundo análise realizada são expostos na Tabela \ref{table:ReqFunc}.
+{
+\renewcommand*{\arraystretch}{1.6}
+\begin{longtable}{|c|p{7cm}|c|}
+\hline
+ \textbf{Nome da Atividade} & \textbf{Descrição} & \textbf{Prioridade} \\ \midrule
+Adicionar Entrada          & A aplicação deve permitir a adição de valores ao orçamento                       & ALTA \\ 
+Adicionar Saída            & A aplicação deve permitir a adição de valores negativos (despesas) ao orçamento  & ALTA \\
+Adicionar Despesa Recorrente & A aplicação deve permitir a adição de despesas recorrentes (e.g. Contas de Água, Internet) & ALTA \\
+Cadastrar Categorias       & A aplicação deve permitir o cadastro de categorias de movimentações (e.g. Salário, Faculdade) & ALTA \\
+Categorizar Entradas       & A aplicação deve permitir a adição de uma categoria à entrada (e.g. Freelance, Bolsa-de-pesquisa) & ALTA \\
+Categorizar Saídas       & A aplicação deve permitir a adição de uma categoria às saídas (e.g. Alimentação, Lazer) & ALTA \\
+Editar Movimentações     & A aplicação deve permitir a edição das movimentações (Entradas, Saídas e Deepesas) & ALTA \\
+Excluir Movimentações     & A aplicação deve permitir a removção das movimentações já adicionadas & ALTA \\
+Visualizar Orçamento  & A aplicação deve permitir a visualização da estado atual do orçamento (mensal) & ALTA \\
+Relatório em PDF      & A aplicação deve possibilitar a exportação de um relatório do orçamento atual em PDF & MÉDIA \\
+Gráficos e Estatísticas  & A aplicação deve possibilitar a exportação de um relatório do orçamento atual em PDF & MÉDIA \\
+Histórico de Movimentações   & A aplicação deve possibilitar a visualização de histórico entradas e saídas dos meses anteriores & BAIXA \\
+\caption{Requisitos funcionais da aplicação}
+\label{table:ReqFunc}
+\end{longtable}
+}
 
 
 \bibliography{BudgetBuddyRefs}
 
 \end{document}          
+
