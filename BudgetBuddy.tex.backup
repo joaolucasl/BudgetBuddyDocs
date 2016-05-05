@@ -1,0 +1,37 @@
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	]{abntex2}
+\usepackage[utf8]{inputenc}
+
+% Title Page
+\title{Budget Buddy - Organizador de Orçamento Pessoal}
+\author{João Lucas Lucchetta}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\section*{Introdução}
+A gerencia de gastos é um quesito importante da moderna. Serviços e bens diversos podem ser adquiridos com poucos toques numa tela,
+e essa facilidade pode ameaçar o planejamento financeiro de muitos. Esse problema se inten
+\section{Funcionalidades}
+
+
+\bibliography{BudgetBuddyRefs}
+
+\end{document}          
